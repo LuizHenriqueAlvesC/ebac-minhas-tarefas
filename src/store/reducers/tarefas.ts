@@ -26,7 +26,7 @@ const initialState: TarefasState = {
       id: 3,
       descricao: 'Pratica a construção de uma landing page',
       prioridade: enums.Prioridade.IMPORTANTE,
-      status: enums.Status.CONCLUIDA,
+      status: enums.Status.PENDENTE,
       titulo: 'Estudar BootStrap'
     }
   ]
@@ -37,11 +37,11 @@ const tarefasSlice = createSlice({
   initialState,
   reducers: {
     remover: (state, action: PayloadAction<number>) => {
-      state.itens = state.itens.filter((tarefa) => tarefa.id !== action.payload)
+      state.itens = state.itens.filter(tarefa => tarefa.id !== action.payload)
     },
     editar: (state, action: PayloadAction<Tarefa>) => {
       const indexDaTarefa = state.itens.findIndex(
-        (t) => t.id === action.payload.id
+        t => t.id === action.payload.id
       )
 
       if (indexDaTarefa >= 0) {

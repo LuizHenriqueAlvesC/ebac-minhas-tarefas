@@ -40,7 +40,7 @@ export const Tag = styled.span<TagProps>`
   font-size: 10px;
   font-weight: bold;
   color: #fff;
-  background-color: ${(props) => retornaCorDeFundo(props)};
+  background-color: ${props => retornaCorDeFundo(props)};
   border-radius: 8px;
   margin-right: 16px;
   display: inline-block;
