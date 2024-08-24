@@ -24,7 +24,6 @@ function App() {
       <EstiloGlobal />
       <Container>
         <RouterProvider router={rotas} />
-        {/*  */}
       </Container>
     </Provider>
   )
